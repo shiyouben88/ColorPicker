@@ -24,12 +24,17 @@ function startColorPicker() {
       navigator.clipboard.writeText(color)
         .then(() => {
           // 显示通知
-          chrome.notifications.create({
+          const notificationId = Date.now().toString();
+          chrome.notifications.create(notificationId, {
             type: 'basic',
             iconUrl: 'images/icon128.png',
             title: '取色成功',
             message: `颜色值 ${color} 已复制到剪贴板`
           });
+          // 3秒后自动关闭通知
+          setTimeout(() => {
+            chrome.notifications.clear(notificationId);
+          }, 3000);
         });
     })
     .catch(error => {

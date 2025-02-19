@@ -6,7 +6,8 @@
   "permissions": [
     "activeTab",
     "clipboardWrite",
-    "scripting"
+    "scripting",
+    "notifications"
   ],
   "action": {
     "default_icon": {
