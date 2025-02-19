@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Color Picker</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+    .color-display {
+      width: 100px;
+      height: 100px;
+      border-radius: 10px;
+      border: 2px solid #ddd;
+      margin-bottom: 10px;
+    }
+    .color-value {
+      font-size: 16px;
+      font-weight: bold;
+      color: #333;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 14px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .status {
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="color-display" id="colorDisplay"></div>
+    <div class="color-value" id="colorValue">点击开始取色</div>
+    <button id="pickButton">开始取色</button>
+    <div class="status" id="status"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
