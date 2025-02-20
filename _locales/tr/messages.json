@@ -1,0 +1,16 @@
+{
+  "extName": {
+    "message": "Ekran Renk Seçici"
+  },
+  "extDescription": {
+    "message": "Ekranınızın herhangi bir yerinden tek tıklamayla renk alın, renk değerlerini anında kopyalayın. Tasarımcılar için vazgeçilmez bir araç!"
+  },
+  "colorCopied": {
+    "message": "Renk: $color$ panoya kopyalandı",
+    "placeholders": {
+      "color": {
+        "content": "$1"
+      }
+    }
+  }
+} 

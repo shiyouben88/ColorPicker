@@ -1,0 +1,16 @@
+{
+  "extName": {
+    "message": "Pemilih Warna Layar"
+  },
+  "extDescription": {
+    "message": "Ekstrak warna dari mana saja di layar Anda dengan satu klik, salin nilai warna secara instan. Alat wajib untuk desainer!"
+  },
+  "colorCopied": {
+    "message": "Warna: $color$ disalin ke clipboard",
+    "placeholders": {
+      "color": {
+        "content": "$1"
+      }
+    }
+  }
+} 

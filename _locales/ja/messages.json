@@ -1,0 +1,16 @@
+{
+  "extName": {
+    "message": "スクリーンカラーピッカー"
+  },
+  "extDescription": {
+    "message": "画面上のどこからでもワンクリックで色を抽出し、カラーコードを即座にコピー。デザイナー必携のツール！"
+  },
+  "colorCopied": {
+    "message": "カラーコード：$color$ をクリップボードにコピーしました",
+    "placeholders": {
+      "color": {
+        "content": "$1"
+      }
+    }
+  }
+} 

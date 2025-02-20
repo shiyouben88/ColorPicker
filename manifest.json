@@ -1,8 +1,9 @@
 {
   "manifest_version": 3,
-  "name": "屏幕取色器",
-  "description": "一键提取网页和屏幕中的任意颜色，快速复制色值，设计师必备工具！",
+  "name": "__MSG_extName__",
+  "description": "__MSG_extDescription__",
   "version": "1.0",
+  "default_locale": "en",
   "permissions": [
     "activeTab",
     "clipboardWrite",

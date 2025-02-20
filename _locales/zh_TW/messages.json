@@ -1,0 +1,16 @@
+{
+  "extName": {
+    "message": "螢幕取色器"
+  },
+  "extDescription": {
+    "message": "一鍵提取網頁和螢幕中的任意顏色，快速複製色值，設計師必備工具！"
+  },
+  "colorCopied": {
+    "message": "色值：$color$ 已複製到剪貼簿",
+    "placeholders": {
+      "color": {
+        "content": "$1"
+      }
+    }
+  }
+} 

@@ -1,0 +1,16 @@
+{
+  "extName": {
+    "message": "Bildschirm-Farbwähler"
+  },
+  "extDescription": {
+    "message": "Farben von überall auf dem Bildschirm mit einem Klick auswählen, Farbwerte sofort kopieren. Ein unverzichtbares Werkzeug für Designer!"
+  },
+  "colorCopied": {
+    "message": "Farbe: $color$ in die Zwischenablage kopiert",
+    "placeholders": {
+      "color": {
+        "content": "$1"
+      }
+    }
+  }
+} 

@@ -1,0 +1,16 @@
+{
+  "extName": {
+    "message": "Selector de Color de Pantalla"
+  },
+  "extDescription": {
+    "message": "Extrae colores de cualquier parte de tu pantalla con un solo clic, copia valores de color instantáneamente. ¡Herramienta imprescindible para diseñadores!"
+  },
+  "colorCopied": {
+    "message": "Color: $color$ copiado al portapapeles",
+    "placeholders": {
+      "color": {
+        "content": "$1"
+      }
+    }
+  }
+} 

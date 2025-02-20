@@ -1,0 +1,16 @@
+{
+  "extName": {
+    "message": "Công cụ Chọn Màu Màn hình"
+  },
+  "extDescription": {
+    "message": "Trích xuất màu từ bất kỳ đâu trên màn hình của bạn chỉ với một cú nhấp chuột, sao chép giá trị màu ngay lập tức. Công cụ thiết yếu cho nhà thiết kế!"
+  },
+  "colorCopied": {
+    "message": "Màu: $color$ đã được sao chép vào clipboard",
+    "placeholders": {
+      "color": {
+        "content": "$1"
+      }
+    }
+  }
+} 

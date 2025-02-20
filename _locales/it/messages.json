@@ -1,0 +1,16 @@
+{
+  "extName": {
+    "message": "Selettore Colore Schermo"
+  },
+  "extDescription": {
+    "message": "Estrai colori da qualsiasi punto dello schermo con un clic, copia istantaneamente i valori dei colori. Strumento indispensabile per i designer!"
+  },
+  "colorCopied": {
+    "message": "Colore: $color$ copiato negli appunti",
+    "placeholders": {
+      "color": {
+        "content": "$1"
+      }
+    }
+  }
+} 

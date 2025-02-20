@@ -1,0 +1,16 @@
+{
+  "extName": {
+    "message": "Pipette à Couleurs"
+  },
+  "extDescription": {
+    "message": "Capturez les couleurs de n'importe où sur votre écran en un clic, copiez instantanément les valeurs. Un outil indispensable pour les designers !"
+  },
+  "colorCopied": {
+    "message": "Couleur : $color$ copiée dans le presse-papiers",
+    "placeholders": {
+      "color": {
+        "content": "$1"
+      }
+    }
+  }
+} 

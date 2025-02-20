@@ -40,8 +40,10 @@ function startColorPicker() {
       // 复制颜色值到剪贴板
       navigator.clipboard.writeText(color)
         .then(() => {
+          // 获取翻译文本
+          const message = chrome.i18n.getMessage('colorCopied', [color]);
           // 创建并显示 toast 提示
-          createToast(`色值：${color} 已复制到剪贴板`);
+          createToast(message);
         });
     })
     .catch(error => {
