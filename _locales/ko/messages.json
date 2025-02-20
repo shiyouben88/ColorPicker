@@ -1,6 +1,6 @@
 {
   "extName": {
-    "message": "화면 색상 추출기"
+    "message": "화면 색상 추출기 - PM Code with AI"
   },
   "extDescription": {
     "message": "화면 어디에서나 원클릭으로 색상을 추출하고 색상 값을 즉시 복사. 디자이너를 위한 필수 도구!"
@@ -13,4 +13,4 @@
       }
     }
   }
-} 
+}

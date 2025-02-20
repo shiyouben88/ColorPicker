@@ -1,6 +1,6 @@
 {
   "extName": {
-    "message": "屏幕取色器"
+    "message": "屏幕取色器 - PM Code with AI"
   },
   "extDescription": {
     "message": "一键提取网页和屏幕中的任意颜色，快速复制色值，设计师必备工具！"
@@ -13,4 +13,4 @@
       }
     }
   }
-} 
+}
