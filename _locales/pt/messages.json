@@ -1,6 +1,6 @@
 {
   "extName": {
-    "message": "Seletor de Cores da Tela"
+    "message": "Seletor de Cores da Tela - PM Code with AI"
   },
   "extDescription": {
     "message": "Capture cores de qualquer lugar da tela com um clique, copie valores de cores instantaneamente. Uma ferramenta essencial para designers!"
@@ -13,4 +13,4 @@
       }
     }
   }
-} 
+}

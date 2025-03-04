@@ -1,6 +1,6 @@
 {
   "extName": {
-    "message": "Selector de Color de Pantalla"
+    "message": "Selector de Color de Pantalla - PM Code with AI"
   },
   "extDescription": {
     "message": "Extrae colores de cualquier parte de tu pantalla con un solo clic, copia valores de color instantáneamente. ¡Herramienta imprescindible para diseñadores!"
@@ -13,4 +13,4 @@
       }
     }
   }
-} 
+}
