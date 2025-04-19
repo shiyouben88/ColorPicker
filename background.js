@@ -65,7 +65,22 @@ function startColorPicker() {
     const isLightColor = isColorLight(color);
     const textColor = isLightColor ? '#000000' : '#ffffff';
     
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes heartBeat {
+        0% { transform: translateX(-50%) scale(1); }
+        50% { transform: translateX(-50%) scale(1.08); }
+        100% { transform: translateX(-50%) scale(1); }
+      }
+      @keyframes slideIn {
+        0% { top: -50px; opacity: 0; }
+        100% { top: 20px; opacity: 1; }
+      }
+    `;
+    document.head.appendChild(style);
+
     toast.style.cssText = `
+      animation: slideIn 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55), heartBeat 1.2s ease-in-out 0.7s 3;
       position: fixed;
       top: 20px;
       left: 50%;
@@ -78,7 +93,8 @@ function startColorPicker() {
       font-family: Arial, sans-serif;
       font-size: 14px;
       pointer-events: none;
-      border: 1px solid ${isLightColor ? '#cccccc' : 'transparent'};
+      border: 1px solid ${isLightColor ? '#ccccccaa' : 'rgba(255,255,255,0.2)'};
+      box-shadow: 0 4px 20px rgba(0,0,0,0.12);
     `;
     
     document.body.appendChild(toast);
@@ -86,10 +102,12 @@ function startColorPicker() {
     // 3秒后移除
     setTimeout(() => {
       toast.style.opacity = '0';
-      toast.style.transition = 'opacity 0.3s ease';
+      toast.style.transform = 'translateX(-50%) scale(0.9)';
+      toast.style.transition = 'all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55)';
       setTimeout(() => {
         toast.remove();
-      }, 300);
+        style.remove();
+      }, 400);
     }, 3000);
   }
 }
