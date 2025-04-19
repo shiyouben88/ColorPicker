@@ -10,22 +10,7 @@ chrome.action.onClicked.addListener(async (tab) => {
   }
 });
 
-// 监听来自content script的消息
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-  if (message.type === 'showNotification') {
-    const notificationId = Date.now().toString();
-    chrome.notifications.create(notificationId, {
-      type: 'basic',
-      iconUrl: 'images/icon128.png',
-      title: '取色成功！',
-      message: `色值：${message.color}\n已自动复制到剪贴板`
-    });
-    // 3秒后自动关闭通知
-    setTimeout(() => {
-      chrome.notifications.clear(notificationId);
-    }, 3000);
-  }
-});
+
 
 function startColorPicker() {
   if (!window.EyeDropper) {
@@ -43,7 +28,7 @@ function startColorPicker() {
           // 获取翻译文本
           const message = chrome.i18n.getMessage('colorCopied', [color]);
           // 创建并显示 toast 提示
-          createToast(message);
+          createToast(message, color);
         });
     })
     .catch(error => {
@@ -51,25 +36,49 @@ function startColorPicker() {
         console.error('Error:', error);
       }
     });
+    
+  // 判断颜色亮度的辅助函数
+  function isColorLight(color) {
+    // 移除可能的 # 前缀
+    const hex = color.replace('#', '');
+    
+    // 将十六进制转换为 RGB
+    const r = parseInt(hex.substr(0, 2), 16);
+    const g = parseInt(hex.substr(2, 2), 16);
+    const b = parseInt(hex.substr(4, 2), 16);
+    
+    // 计算亮度 (基于人眼对不同颜色的感知)
+    // 公式: (0.299*R + 0.587*G + 0.114*B) / 255
+    const brightness = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+    
+    // 亮度大于 0.5 认为是浅色
+    return brightness > 0.5;
+  }
 
   // 将 toast 创建函数移到注入脚本的作用域内
-  function createToast(message) {
+  function createToast(message, color) {
     // 创建 toast 元素
     const toast = document.createElement('div');
     toast.textContent = message;
+    
+    // 计算颜色亮度，决定文字颜色
+    const isLightColor = isColorLight(color);
+    const textColor = isLightColor ? '#000000' : '#ffffff';
+    
     toast.style.cssText = `
       position: fixed;
       top: 20px;
       left: 50%;
       transform: translateX(-50%);
-      background: rgba(0, 0, 0, 0.8);
-      color: white;
+      background: ${color};
+      color: ${textColor};
       padding: 10px 20px;
       border-radius: 4px;
       z-index: 999999;
       font-family: Arial, sans-serif;
       font-size: 14px;
       pointer-events: none;
+      border: 1px solid ${isLightColor ? '#cccccc' : 'transparent'};
     `;
     
     document.body.appendChild(toast);
